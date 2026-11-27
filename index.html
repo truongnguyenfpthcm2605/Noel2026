@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#071b25">
+  <title>Mùa đông của chúng mình ✨</title>
+  <style>
+    :root{color-scheme:dark;--gold:#ffd985;--cream:#fff4db;--red:#bd4051;--pine:#123d36}
+    *{box-sizing:border-box}
+    html,body{margin:0;min-height:100%;font-family:Georgia,"Times New Roman",serif;color:var(--cream)}
+    body{min-height:100svh;overflow-x:hidden;background:radial-gradient(ellipse at 50% 76%,#173944 0,#0c2934 35%,#071923 75%,#06131e 100%);position:relative}
+    body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.28;background-image:radial-gradient(1px 1px at 12% 18%,#fff 99%,transparent),radial-gradient(1px 1px at 82% 13%,#ffe5a3 99%,transparent),radial-gradient(1px 1px at 66% 38%,#fff 99%,transparent),radial-gradient(1px 1px at 26% 51%,#fff 99%,transparent),radial-gradient(1px 1px at 91% 61%,#fff 99%,transparent);background-size:270px 220px}
+    .scene{position:relative;isolation:isolate;min-height:100svh;display:grid;place-items:center;padding:32px 18px 44px}
+    .moon{position:absolute;top:8%;right:13%;width:76px;aspect-ratio:1;border-radius:50%;background:#fff1c8;box-shadow:0 0 25px #ffedbf88,0 0 75px #ffdf9a33;opacity:.88}
+    .moon:after{content:"";position:absolute;width:68px;aspect-ratio:1;left:20px;top:-9px;background:#0a202a;border-radius:50%}
+    .card{width:min(100%,940px);text-align:center;position:relative;z-index:2;padding:clamp(22px,5vw,48px) clamp(16px,4vw,42px) 25px;border:1px solid #ffe7b52b;border-radius:28px;background:linear-gradient(155deg,#102b35cc,#071a25d9);box-shadow:0 25px 90px #020b1090,inset 0 1px #ffffff12;backdrop-filter:blur(5px)}
+    .eyebrow{color:#ffdc98;letter-spacing:.25em;text-transform:uppercase;font:600 11px/1.5 system-ui,sans-serif}
+    h1{font-size:clamp(32px,6vw,60px);line-height:1.08;margin:12px 0 7px;font-weight:500;text-shadow:0 2px 25px #ffd77d55}
+    .intro{margin:0;color:#d4e1dc;font:14px/1.7 system-ui,sans-serif}
+    .art{position:relative;width:min(100%,660px);height:clamp(300px,53vw,410px);margin:4px auto 0}
+    .ground{position:absolute;bottom:12px;left:3%;right:3%;height:42px;border-radius:50%;background:radial-gradient(ellipse,#e8f4e7 0%,#a8c9c8 27%,#5e9294 47%,transparent 72%);filter:blur(5px);opacity:.7}
+    .tree{position:absolute;left:50%;bottom:40px;transform:translateX(-50%);width:240px;height:330px;filter:drop-shadow(0 12px 20px #020c0b8c)}
+    .trunk{position:absolute;bottom:0;left:calc(50% - 16px);width:32px;height:65px;background:linear-gradient(90deg,#633d2c,#a46b42,#593727);border-radius:5px 5px 2px 2px}
+    .tier{position:absolute;left:50%;transform:translateX(-50%);width:0;height:0;border-left:var(--w) solid transparent;border-right:var(--w) solid transparent;border-bottom:var(--h) solid var(--color);filter:drop-shadow(0 9px 3px #06171280)}
+    .tier.one{--w:72px;--h:114px;--color:#1b6751;bottom:162px}.tier.two{--w:97px;--h:139px;--color:#145642;bottom:91px}.tier.three{--w:123px;--h:155px;--color:#104b3c;bottom:23px}
+    .garland{position:absolute;left:50%;width:168px;height:100px;transform:translateX(-50%);border-bottom:2px solid #eac777a8;border-radius:0 0 50% 50%;z-index:2}
+    .garland.g1{bottom:154px;width:118px;height:65px}.garland.g2{bottom:92px;width:165px;height:74px}.garland.g3{bottom:24px;width:210px;height:85px}
+    .bulb{position:absolute;width:8px;height:8px;border-radius:50%;background:#ffe49a;box-shadow:0 0 10px 3px #ffd57599;animation:twinkle 1.8s ease-in-out infinite alternate}
+    .garland .bulb:nth-child(1){left:10%;top:62%}.garland .bulb:nth-child(2){left:28%;top:89%;animation-delay:.4s;background:#ffb0a0}.garland .bulb:nth-child(3){left:50%;top:100%;animation-delay:.9s}.garland .bulb:nth-child(4){left:73%;top:87%;animation-delay:.2s;background:#c7e8c1}.garland .bulb:nth-child(5){left:91%;top:60%;animation-delay:1.1s}
+    @keyframes twinkle{from{opacity:.55;transform:scale(.78)}to{opacity:1;transform:scale(1.25);box-shadow:0 0 16px 5px #ffd575aa}}
+    .star{position:absolute;z-index:4;left:50%;bottom:321px;transform:translateX(-50%);color:#ffe5a1;font-size:37px;text-shadow:0 0 11px #ffd45d,0 0 28px #ffd45d;animation:starGlow 2.5s ease-in-out infinite alternate}
+    @keyframes starGlow{to{filter:brightness(1.45);transform:translateX(-50%) scale(1.1)}}
+    .ornament{position:absolute;z-index:3;width:14px;height:14px;border-radius:50%;background:radial-gradient(circle at 30% 25%,#fff3ce,#e9a949 30%,#aa473f 75%);box-shadow:0 0 8px #f6c86b77}
+    .o1{left:42%;bottom:183px}.o2{left:59%;bottom:132px;background:radial-gradient(circle at 30% 25%,#ffe,#d87875 35%,#9b2439)}.o3{left:35%;bottom:89px}.o4{left:63%;bottom:62px;background:radial-gradient(circle at 30% 25%,#ffe,#d87875 35%,#9b2439)}.o5{left:48%;bottom:110px;width:11px;height:11px}
+    .couple{position:absolute;z-index:5;bottom:35px;left:50%;transform:translateX(-50%);width:235px;height:143px;display:flex;align-items:flex-end;justify-content:center}
+    .person{position:relative;width:82px;height:128px;filter:drop-shadow(0 7px 5px #09151a66)}
+    .person.guy{transform:translateX(9px)}.person.girl{transform:translateX(-8px)}
+    .head{position:absolute;top:8px;left:23px;width:42px;height:45px;border-radius:46% 46% 48% 48%;background:linear-gradient(120deg,#ffd5b1,#eaa17f);z-index:2}
+    .hair{position:absolute;top:3px;left:20px;width:48px;height:28px;border-radius:55% 55% 25% 25%;background:#50352c;z-index:3}
+    .girl .hair{height:38px;border-radius:55% 55% 35% 35%;background:#4b3028}.girl .hair:after{content:"";position:absolute;right:-3px;top:20px;width:13px;height:39px;border-radius:0 0 9px 9px;background:#4b3028}
+    .hat{position:absolute;top:-5px;left:18px;width:52px;height:29px;background:#b93648;border-radius:50% 50% 7px 7px;transform:rotate(-7deg);z-index:4}
+    .hat:before{content:"";position:absolute;left:0;right:-3px;bottom:-5px;height:9px;background:#fff1dc;border-radius:8px}
+    .hat:after{content:"";position:absolute;right:0;top:-8px;width:13px;height:13px;background:#fff3df;border-radius:50%}
+    .face{position:absolute;top:28px;left:0;width:100%;z-index:5;color:#513b38;font:11px/1 system-ui,sans-serif;letter-spacing:8px;padding-left:13px}
+    .scarf{position:absolute;top:47px;left:16px;width:57px;height:12px;background:#c3474e;border-radius:8px;z-index:6}.scarf:after{content:"";position:absolute;right:8px;top:4px;width:10px;height:28px;background:#c3474e;border-radius:0 0 5px 5px}
+    .coat{position:absolute;top:52px;left:10px;width:64px;height:67px;background:linear-gradient(90deg,#a93245,#ce4a51,#a93245);border-radius:18px 18px 9px 9px;z-index:1}
+    .girl .coat{background:linear-gradient(90deg,#1c594c,#347664,#1c594c);height:72px}
+    .coat:before{content:"";position:absolute;left:28px;top:1px;width:8px;height:66px;background:#ffe8cf;border-radius:5px}
+    .arm{position:absolute;top:63px;width:17px;height:53px;border-radius:12px;background:#b63e4a;z-index:0}.arm.left{left:2px;transform:rotate(14deg)}.arm.right{right:2px;transform:rotate(-18deg)}.girl .arm{background:#286656}
+    .boots{position:absolute;z-index:1;bottom:0;left:15px;width:19px;height:24px;border-radius:3px 3px 7px 7px;background:#50352e;box-shadow:31px 0 #50352e}
+    .heart{position:absolute;top:67px;left:calc(50% - 8px);z-index:8;color:#ffd579;font:20px system-ui;filter:drop-shadow(0 0 8px #ffd15a);animation:heart 1.5s ease-in-out infinite}
+    @keyframes heart{50%{transform:scale(1.2)}}
+    .wish{font-size:clamp(20px,4vw,29px);line-height:1.4;color:#ffe2a6;margin:0 0 4px;text-shadow:0 0 18px #f7ca7650}
+    .sign{font:13px/1.6 system-ui,sans-serif;color:#d5e3de;margin:0 0 22px}
+    .controls{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}
+    button{font:600 12px system-ui,sans-serif;letter-spacing:.02em;color:#fff0d5;background:#ffffff0c;border:1px solid #ffe5b544;border-radius:99px;padding:10px 15px;cursor:pointer;transition:background .2s,border-color .2s,transform .2s}
+    button:hover{background:#ffffff19;border-color:#ffe5b599;transform:translateY(-1px)}button:focus-visible{outline:2px solid #ffdc98;outline-offset:3px}
+    .snow{position:fixed;inset:0;z-index:10;pointer-events:none;overflow:hidden}
+    .flake{position:absolute;top:-12px;border-radius:50%;background:#fff;opacity:var(--o);filter:drop-shadow(0 0 3px #fff8);animation:fall var(--dur) linear var(--delay) infinite;will-change:transform}
+    @keyframes fall{to{transform:translate3d(var(--drift),110vh,0)}}
+    .snow-off .flake{display:none}
+    @media(max-width:560px){.scene{padding:20px 12px}.card{border-radius:22px}.moon{width:52px;right:8%;top:5%}.moon:after{width:47px;left:14px;top:-6px}.art{height:310px;transform:scale(.9);transform-origin:top center;margin-bottom:-25px}.tree{transform:translateX(-50%) scale(.88);transform-origin:bottom center}.star{bottom:289px}.couple{transform:translateX(-50%) scale(.9);transform-origin:bottom center}.intro{max-width:330px;margin:0 auto}.sign{margin-bottom:17px}}
+    @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important}.flake{display:none!important}}
+  </style>
+</head>
+<body>
+  <div class="snow" id="snow" aria-hidden="true"></div>
+  <main class="scene">
+    <div class="moon" aria-hidden="true"></div>
+    <section class="card" aria-labelledby="title">
+      <div class="eyebrow">Đêm đông · 24 tháng 12</div>
+      <h1 id="title">Mùa đông của chúng mình</h1>
+      <p class="intro">Ngoài kia tuyết đang rơi, còn trong tim anh là một mùa thật ấm.</p>
+      <div class="art" aria-label="Cây thông Noel và cặp đôi Trường, Linh">
+        <div class="ground"></div>
+        <div class="tree" aria-hidden="true">
+          <div class="tier one"></div><div class="tier two"></div><div class="tier three"></div><div class="trunk"></div>
+          <div class="garland g1"><i class="bulb"></i><i class="bulb"></i><i class="bulb"></i><i class="bulb"></i><i class="bulb"></i></div>
+          <div class="garland g2"><i class="bulb"></i><i class="bulb"></i><i class="bulb"></i><i class="bulb"></i><i class="bulb"></i></div>
+          <div class="garland g3"><i class="bulb"></i><i class="bulb"></i><i class="bulb"></i><i class="bulb"></i><i class="bulb"></i></div>
+          <span class="star">★</span><i class="ornament o1"></i><i class="ornament o2"></i><i class="ornament o3"></i><i class="ornament o4"></i><i class="ornament o5"></i>
+        </div>
+        <div class="couple" aria-hidden="true">
+          <div class="person guy"><div class="hair"></div><div class="head"></div><div class="hat"></div><div class="face">• •</div><div class="scarf"></div><div class="coat"></div><div class="arm left"></div><div class="arm right"></div><div class="boots"></div></div>
+          <div class="heart">♥</div>
+          <div class="person girl"><div class="hair"></div><div class="head"></div><div class="hat"></div><div class="face">• •</div><div class="scarf"></div><div class="coat"></div><div class="arm left"></div><div class="arm right"></div><div class="boots"></div></div>
+        </div>
+      </div>
+      <!-- Chỉnh lời chúc và tên người gửi ở hai dòng bên dưới -->
+      <p class="wish">Merry Christmas, Linh! ❤️</p>
+      <p class="sign">Yêu em, Trường</p>
+      <div class="controls" aria-label="Tùy chọn hiệu ứng">
+        <button id="snowToggle" type="button" aria-pressed="true">❄ Tắt tuyết</button>
+        <button id="musicToggle" type="button" aria-pressed="false">♫ Bật nhạc dịu dàng</button>
+      </div>
+    </section>
+  </main>
+  <script>
+    // Tuyết nhẹ, số lượng cố định để giữ hoạt ảnh mượt trên điện thoại.
+    const snowLayer = document.getElementById('snow');
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (!reducedMotion) {
+      const count = Math.min(70, Math.max(30, Math.floor(window.innerWidth / 12)));
+      const fragment = document.createDocumentFragment();
+      for (let i = 0; i < count; i++) {
+        const flake = document.createElement('i');
+        flake.className = 'flake';
+        const size = Math.random() * 3 + 2;
+        flake.style.left = Math.random() * 100 + 'vw';
+        flake.style.width = size + 'px';
+        flake.style.height = size + 'px';
+        flake.style.setProperty('--o', (Math.random() * .55 + .25).toFixed(2));
+        flake.style.setProperty('--dur', (Math.random() * 9 + 8).toFixed(1) + 's');
+        flake.style.setProperty('--delay', (-Math.random() * 18).toFixed(1) + 's');
+        flake.style.setProperty('--drift', (Math.random() * 100 - 50).toFixed(0) + 'px');
+        fragment.appendChild(flake);
+      }
+      snowLayer.appendChild(fragment);
+    }
+    const snowButton = document.getElementById('snowToggle');
+    if (reducedMotion) snowButton.textContent = '❄ Tuyết đã tắt theo cài đặt';
+    snowButton.addEventListener('click', () => {
+      if (reducedMotion) return;
+      const isOff = document.body.classList.toggle('snow-off');
+      snowButton.setAttribute('aria-pressed', String(!isOff));
+      snowButton.textContent = isOff ? '❄ Bật tuyết' : '❄ Tắt tuyết';
+    });
+
+    // Nhạc tạo bằng Web Audio, chỉ bắt đầu sau khi người xem bấm nút.
+    let audioContext = null;
+    let musicTimer = null;
+    let noteIndex = 0;
+    const musicButton = document.getElementById('musicToggle');
+    const melody = [523.25, 659.25, 783.99, 659.25, 587.33, 698.46, 783.99, 698.46];
+    function playNote() {
+      if (!audioContext) return;
+      const oscillator = audioContext.createOscillator();
+      const gain = audioContext.createGain();
+      oscillator.type = 'sine';
+      oscillator.frequency.value = melody[noteIndex++ % melody.length];
+      gain.gain.setValueAtTime(0.0001, audioContext.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.045, audioContext.currentTime + 0.08);
+      gain.gain.exponentialRampToValueAtTime(0.0001, audioContext.currentTime + 0.8);
+      oscillator.connect(gain); gain.connect(audioContext.destination);
+      oscillator.start(); oscillator.stop(audioContext.currentTime + 0.85);
+    }
+    musicButton.addEventListener('click', async () => {
+      if (musicTimer) {
+        clearInterval(musicTimer); musicTimer = null;
+        if (audioContext) await audioContext.suspend();
+        musicButton.textContent = '♫ Bật nhạc dịu dàng';
+        musicButton.setAttribute('aria-pressed', 'false');
+      } else {
+        audioContext = audioContext || new (window.AudioContext || window.webkitAudioContext)();
+        await audioContext.resume(); playNote(); musicTimer = setInterval(playNote, 1050);
+        musicButton.textContent = '♫ Tắt nhạc';
+        musicButton.setAttribute('aria-pressed', 'true');
+      }
+    });
+  </script>
+</body>
+</html>
